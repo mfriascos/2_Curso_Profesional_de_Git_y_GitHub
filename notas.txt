@@ -3,5 +3,27 @@
 REBASE Reescribe la historia del repositorio, cambia la historia de donde comenzó la rama y sólo debe 
 ser usado de manera local.
 El rebase se lo hace desde la rama afectada, no desde la rama main. 
-$ git rebase main 
+---> otrarama
+$ git rebase main #Primero se hace rebase hacia la rama principal y luego hacia 
+		  #la rama secundaria desde main
+---> main
+$ git rebase otrarama
+--En Conlusión un git rebase es una forma de hacer cambios silenciosos en otras 
+ramas y volver a pegar una historia de esa rama a una rama anterior haciendole 
+un rebase.--
+
+36/43 GIT STASH: GUARDAR CAMBIOS EN MEMORIA Y RECUPERARLOS DESPUÉS
+
+STASHED Nos sirve para guardar cambios para después, es una lista de estados que 
+nos guarda algunos cambios de rama sin perder el trabajo que todavía no guardamos 
+en un commit. 
+--->main
+$ git stash #Vuelve al estado anterior, esto funciona siempre y cuando no se haga
+un commit, esto también guarda el cambio realizado, como un punto de restauración hacia el estado editado. 
+$ git stash pop #Vuelve al estado editado.
+$ git stash list #Muestra los stash temporales guardados.
+$ git stash branch otrarama #Si quiero poner esos cambios realizados en otra rama 
+se ingresa este comando, automaticamente se crea esa rama
+$ git stash drop #Para borrar el git stash 
+
 
