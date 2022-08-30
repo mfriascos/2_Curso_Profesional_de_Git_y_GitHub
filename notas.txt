@@ -18,15 +18,25 @@ STASHED Nos sirve para guardar cambios para después, es una lista de estados qu
 nos guarda algunos cambios de rama sin perder el trabajo que todavía no guardamos 
 en un commit. 
 --->main
-$ git stash #Vuelve al estado anterior, esto funciona siempre y cuando no se haga
-un commit, esto también guarda el cambio realizado, como un punto de restauración hacia el estado editado. 
-$ git stash pop #Vuelve al estado editado.
-$ git stash list #Muestra los stash temporales guardados.
-$ git stash branch otrarama #Si quiero poner esos cambios realizados en otra rama 
-se ingresa este comando, automaticamente se crea esa rama
-$ git stash drop #Para borrar el git stash 
+$ git stash 			#Vuelve al estado anterior, esto funciona siempre
+				#y cuando no se haga un commit, esto también guarda
+				#el cambio realizado, como un punto de restauración
+				#hacia el estado editado. 
+$ git stash pop 		#Vuelve al estado editado.
+$ git stash list 		#Muestra los stash temporales guardados.
+$ git stash branch otrarama 	#Si quiero poner esos cambios realizados en otra
+				#rama se ingresa este comando, automaticamente se 
+				#crea esa rama
+$ git stash drop 		#Para borrar el git stash 
 
 37/43 GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS 
 
+$ git clean --dry-run  #Muestra los archivos que se van a borrar 
+$ git clean -f         #Borra los archivos no deseados 
+$ git clean -df	       #Borra las carpetas
 
+38/43 GIT CHERRY-PICK TRAER COMMITS VIEJOS AL HEAD DE UN BRANCH
 
+---> main
+$ git cherry-pick hashdelcommit #Se inserta el hash del commit que quiero traer, 
+				#Esto se lo hace en la rama main
