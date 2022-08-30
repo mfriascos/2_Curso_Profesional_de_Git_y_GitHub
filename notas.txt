@@ -26,4 +26,7 @@ $ git stash branch otrarama #Si quiero poner esos cambios realizados en otra ram
 se ingresa este comando, automaticamente se crea esa rama
 $ git stash drop #Para borrar el git stash 
 
+37/43 GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS 
+
+
 
