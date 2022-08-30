@@ -1,0 +1,7 @@
+35/43: GIT REBASE: REORGANIZANDO EL TRABAJO REALIZADO
+
+REBASE Reescribe la historia del repositorio, cambia la historia de donde comenzó la rama y sólo debe 
+ser usado de manera local.
+El rebase se lo hace desde la rama afectada, no desde la rama main. 
+$ git rebase main 
+
