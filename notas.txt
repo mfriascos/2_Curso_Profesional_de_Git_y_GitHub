@@ -40,3 +40,55 @@ $ git clean -df	       #Borra las carpetas
 ---> main
 $ git cherry-pick hashdelcommit #Se inserta el hash del commit que quiero traer, 
 				#Esto se lo hace en la rama main
+
+39/43 GIT RESET Y REFLOG:ÚSESE EN CASO DE EMERGENCIA 
+
+Git guarda todos los cambios aunque decidads borarlos, al borrar un cambio lo
+que estás haciendo sólo es actualizar la punta del branch, para gestionar estas 
+puntas existe un mecanismo llamado registros de referencia o reflogs. 
+---> main
+$git reflog 		#Se busca el hash correcto donde no hayan cambios no
+			#deseados
+$git reset --HARD hash 	#Regresa al punto de restauración y desaperecen todos los
+			#cambios realizados, incluso los commits. 
+
+40/43 RECONSTRUIR COMMITS EN GIT CON AMEND
+
+$ git commit --amend 	#Los cambios que se hicieron los pega al commit anterior
+			#No crea un commit nuevoRegresa al punto de restauración y desaperecen todos los
+						#cambios realizados, incluso los commits. 
+
+40/43 RECONSTRUIR COMMITS EN GIT CON AMEND
+
+$ git commit --amend 	#Los cambios que se hicieron los pega al commit anterior
+			#No crea un commit nuevo
+
+41/43 BUSCAR EN ARCHIVOS Y COMMITS DE GIT CON GREP Y LOG 
+
+$ git grep color	#Busca donde se usó color 
+$ git grep la 		#Donde se usó la palabra "la"
+$ git grep -n color 	#En qué lineas se usó la plabra color 
+$ git grep -c la 	#Cuantas veces se usó la plabra "la"
+$ git grep -c platzi 	#Cuantas veces se usa la plabra Platzi 
+$ git grep -c "<p>"	#Cuantas veces se utilizó la etiqueta <p>
+$ git log -S "cabecera"	#Cuantas veces se usó la plabra cabecera en todos los 
+			#commits. 
+---> grep: para los archivos. 
+---> log: para los commits
+
+42/43 COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB
+
+$ git shortlog -sn			#Muestra cuantos commit han hecho cada 
+					#miembro del equipo 
+$ git shortlog -sn --all		#Muestra cuantos commit han hecho cada 
+					#miembro del equipo hasta los que han 
+					#sido eliminados
+$ git shortlog -sn --all --no-merge	#Muestra cuantos commit han hecho cada
+					#miembro quitando los eliminados sin los 
+					#merges
+$ git blame ARCHIVO -Llinea_inicial,linea_final # Muestra quien hizo cada cosa por
+					#linea indicandole desde que línea ver por
+					#ejemplo -L35,50.
+$ git branch -r 			#Se muestran todas las ramas remotas 
+$ git branch -a 			#Se muestran todas las ramas tanto locales
+					#como remotas
