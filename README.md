@@ -1,9 +1,9 @@
-#CURSO PROFESIONAL DE GIT Y GITHUB mfriascos
+# CURSO PROFESIONAL DE GIT Y GITHUB mfriascos
 
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
 
-##Comandos básicos de git 
+## Comandos básicos de git 
 
 `$ git init`	Inicializa un repositorio en la carpeta donde se ejecuta 
 
@@ -40,7 +40,7 @@ Para utilizar el comando Merge traigo los cambios que quiero que se ejecuten. Es
 `---> main`
 `$ git merge head`
 
-##GITHUB
+## GITHUB
 
 `$ git remote add origin urldelrepositorioquecree`  Para traer y enviar cosas al servidor de GitHub
 
@@ -56,7 +56,7 @@ Para problemas con git pull
 
 `$ git pull origin main --rebase`   Se utiliza cuando el primer pull no funciona 
 
-###CONEXIÓN A GITHUB CON SSH
+### CONEXIÓN A GITHUB CON SSH
 
 Se copia el enlace ssh y luego se ejecutan los siguientes comandos 
 
@@ -68,7 +68,7 @@ Para trabajos o proyectos a remoto
 
 `$ git push origin main`    Siempre después del commit
 
-###TAG Y VERSIONES EN GIT Y GITHUB
+### TAG Y VERSIONES EN GIT Y GITHUB
 
 `$ git tag -a numerodeversion -m "Comentario" numerodelcommitobtenidodegitlog`
 
@@ -90,7 +90,7 @@ Si se crea un tag errado
 
 `$ git push origin :refs/tags/nombredeltag`
 
-###MANEJO DE RAMAS EN GITHUB
+### MANEJO DE RAMAS EN GITHUB
 
 `$ git show branch` Muestra las ramas existentes y su historia
 
@@ -102,7 +102,7 @@ Para enviar una rama
 
 `$ git push origin nombredelarama`
 
-###CREAR HEADER Y FOOTER
+### CREAR HEADER Y FOOTER
 
 `$ git branch header`
 
@@ -110,15 +110,15 @@ Para enviar una rama
 
 `$ git push origin footer`
 
-###CONFIGURAR MÚLTIPLES COLABORADORES EN UN REPOSITORIO DE GITHUB
+### CONFIGURAR MÚLTIPLES COLABORADORES EN UN REPOSITORIO DE GITHUB
 
 Ingresa los colaboradores en las configuraciones del repositorio 
 
-###FLUJO DE TRABAJO PROFESIONAL CON PULL REQUEST
+### FLUJO DE TRABAJO PROFESIONAL CON PULL REQUEST
 
 Estado intermedio antes de hacer el merge
 
-###CREANDO UN FORK, CONTRIBUYENDO A UN REPOSITORIO
+### CREANDO UN FORK, CONTRIBUYENDO A UN REPOSITORIO
 
 se hace un fork, se toma una copia del repositorio y se clona. 
 
@@ -126,14 +126,14 @@ Se clona al repositorio local
 
 Se realizan cambios y luego un commit
 
-###IGNORAR ARCHIVOS EN EL REPOSITORIO CON .GITIGNORE
+### IGNORAR ARCHIVOS EN EL REPOSITORIO CON .GITIGNORE
 
 .gitignore es una lista que se va a ignorar
 
 Creo una archivo llamado de esa forma (.gitignore) y en él escribo * jpg si quiero ignorar todas las imágenes, por ejemplo, o /pictures/*.jpg
 si quiero ignorar las imagenes de la carpeta pictures
 
-###35/43: GIT REBASE: REORGANIZANDO EL TRABAJO REALIZADO
+### 35/43: GIT REBASE: REORGANIZANDO EL TRABAJO REALIZADO
 
 **REBASE** Reescribe la historia del repositorio, cambia la historia de donde comenzó la rama y sólo debe ser usado de manera local.
 El rebase se lo hace desde la rama afectada, no desde la rama main. 
@@ -146,7 +146,7 @@ El rebase se lo hace desde la rama afectada, no desde la rama main.
 
 --En Conlusión un git rebase es una forma de hacer cambios silenciosos en otras ramas y volver a pegar una historia de esa rama a una rama anterior haciendole un rebase.--
 
-###36/43 GIT STASH: GUARDAR CAMBIOS EN MEMORIA Y RECUPERARLOS DESPUÉS
+### 36/43 GIT STASH: GUARDAR CAMBIOS EN MEMORIA Y RECUPERARLOS DESPUÉS
 
 **STASHED** Nos sirve para guardar cambios para después, es una lista de estados que nos guarda algunos cambios de rama sin perder el trabajo que todavía no guardamos en un commit.
 
@@ -161,7 +161,7 @@ El rebase se lo hace desde la rama afectada, no desde la rama main.
 
 `$ git stash drop`  Para borrar el git stash 
 
-###37/43 GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS 
+### 37/43 GIT CLEAN: LIMPIAR TU PROYECTO DE ARCHIVOS NO DESEADOS 
 
 `$ git clean --dry-run` Muestra los archivos que se van a borrar 
 
@@ -169,12 +169,12 @@ El rebase se lo hace desde la rama afectada, no desde la rama main.
 
 `$ git clean -df`   Borra las carpetas
 
-###38/43 GIT CHERRY-PICK TRAER COMMITS VIEJOS AL HEAD DE UN BRANCH
+### 38/43 GIT CHERRY-PICK TRAER COMMITS VIEJOS AL HEAD DE UN BRANCH
 
 `--->main`
 `$ git cherry-pick hashdelcommit`   Se inserta el hash del commit que quiero traer Esto se lo hace en la rama main
 
-###39/43 GIT RESET Y REFLOG:ÚSESE EN CASO DE EMERGENCIA 
+### 39/43 GIT RESET Y REFLOG:ÚSESE EN CASO DE EMERGENCIA 
 
 Git guarda todos los cambios aunque decidads borarlos, al borrar un cambio lo que estás haciendo sólo es actualizar la punta del branch, para gestionar estas puntas existe un mecanismo llamado registros de referencia o reflogs. 
 
@@ -183,15 +183,15 @@ Git guarda todos los cambios aunque decidads borarlos, al borrar un cambio lo qu
 
 `$git reset --HARD hash`    Regresa al punto de restauración y desaperecen todos loscambios realizados, incluso los commits. 
 
-###40/43 RECONSTRUIR COMMITS EN GIT CON AMEND
+### 40/43 RECONSTRUIR COMMITS EN GIT CON AMEND
 
 `$ git commit --amend`  Los cambios que se hicieron los pega al commit anterior No crea un commit nuevoRegresa al punto de restauración y desaperecen todos los cambios realizados, incluso los commits. 
 
-###40/43 RECONSTRUIR COMMITS EN GIT CON AMEND
+### 40/43 RECONSTRUIR COMMITS EN GIT CON AMEND
 
 `$ git commit --amend`  Los cambios que se hicieron los pega al commit anterior No crea un commit nuevo
 
-###41/43 BUSCAR EN ARCHIVOS Y COMMITS DE GIT CON GREP Y LOG 
+### 41/43 BUSCAR EN ARCHIVOS Y COMMITS DE GIT CON GREP Y LOG 
 
 `$ git grep color`  Busca donde se usó color 
 
@@ -210,7 +210,7 @@ Git guarda todos los cambios aunque decidads borarlos, al borrar un cambio lo qu
 *---> grep: para los archivos.*
 *---> log: para los commits*
 
-###42/43 COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB
+### 42/43 COMANDOS Y RECURSOS COLABORATIVOS EN GIT Y GITHUB
 
 `$ git shortlog -sn`    Muestra cuantos commit han hecho cada miembro del equipo 
 
