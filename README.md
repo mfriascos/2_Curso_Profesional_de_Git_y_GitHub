@@ -219,5 +219,7 @@ Git guarda todos los cambios aunque decidads borarlos, al borrar un cambio lo qu
 `$ git shortlog -sn --all --no-merge`   Muestra cuantos commit han hecho cada miembro quitando los eliminados sin los merges
 
 `$ git blame ARCHIVO -Llinea_inicial,linea_final` Muestra quien hizo cada cosa por linea indicandole desde que línea ver por ejemplo -L35,50.
+
 `$ git branch -r`   Se muestran todas las ramas remotas 
+
 `$ git branch -a`   Se muestran todas las ramas tanto locales como remotas
